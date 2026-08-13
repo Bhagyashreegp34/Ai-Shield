@@ -1,122 +1,78 @@
-# Owl Carousel 2
+# 🛡️ AI Shield
 
-Touch enabled [jQuery](https://jquery.com/) plugin that lets you create a beautiful, responsive carousel slider. **To get started, check out https://owlcarousel2.github.io/OwlCarousel2/.**
+### AI-Based Phishing Website Detection
 
-**Notice:** The old Owl Carousel site (owlgraphic [dot] com) is no longer in use. Please delete all references to this in bookmarks and your own products' documentation as it's being used for malicious purposes.
+AI Shield is a machine learning and deep learning project designed to detect phishing websites and malicious URLs. The project analyzes URL and webpage features and classifies websites as Phishing or Legitimate.
 
-## Quick start
+## 🚀 Features
 
-### Install
+- Phishing URL detection
+- Machine Learning-based classification
+- LSTM Deep Learning model
+- Feature selection and analysis
+- K-Fold Cross Validation
+- Performance evaluation using Accuracy, Precision, Recall and F1-Score
 
-This package can be installed with:
+## 🧠 Technologies Used
 
-- [npm](https://www.npmjs.com/package/owl.carousel): `npm install --save owl.carousel` or `yarn add owl.carousel jquery`
-- [bower](http://bower.io/search/?q=owl.carousel): `bower install --save owl.carousel`
+- Python
+- Machine Learning
+- Deep Learning
+- LSTM
+- Random Forest
+- Naive Bayes
+- ANN / DNN
+- Weka
+- Deeplearning4j
 
-Or download the [latest release](https://github.com/OwlCarousel2/OwlCarousel2/releases).
+## 📊 Dataset
 
-### Load
+- Total Websites: 11,055
+- Phishing Websites: 4,898
+- Legitimate Websites: 6,157
+- Total Features: 30
 
-#### Webpack
+The dataset contains both phishing and legitimate websites and is used to train and evaluate the classification models.
 
-Add jQuery via the "webpack.ProvidePlugin" to your webpack configuration:
-    
-    const webpack = require('webpack');
-    
-    //...
-    plugins: [
-        new webpack.ProvidePlugin({
-          $: 'jquery',
-          jQuery: 'jquery',
-          'window.jQuery': 'jquery'
-        }),
-    ],
-    //...
+## 📈 Results
 
-Load the required stylesheet and JS:
+The LSTM model achieved:
 
-```js
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel';
-```
+| Metric | Score |
+|---|---:|
+| Accuracy | 96.55% |
+| Precision | 96.6% |
+| Recall | 97.0% |
+| F1-Score | 96.9% |
+| AUC | 0.995 |
 
-#### Static HTML
+## ⚙️ Methodology
 
-Put the required stylesheet at the [top](https://developer.yahoo.com/performance/rules.html#css_top) of your markup:
-
-```html
-<link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
-```
-
-```html
-<link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.carousel.min.css" />
-```
-
-**NOTE:** If you want to use the default navigation styles, you will also need to include `owl.theme.default.css`.
-
-
-Put the script at the [bottom](https://developer.yahoo.com/performance/rules.html#js_bottom) of your markup right after jQuery:
-
-```html
-<script src="/node_modules/jquery/dist/jquery.js"></script>
-<script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-```
-
-```html
-<script src="/bower_components/jquery/dist/jquery.js"></script>
-<script src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
-```
-
-### Usage
-
-Wrap your items (`div`, `a`, `img`, `span`, `li` etc.) with a container element (`div`, `ul` etc.). Only the class `owl-carousel` is mandatory to apply proper styles:
-
-```html
-<div class="owl-carousel owl-theme">
-  <div> Your Content </div>
-  <div> Your Content </div>
-  <div> Your Content </div>
-  <div> Your Content </div>
-  <div> Your Content </div>
-  <div> Your Content </div>
-  <div> Your Content </div>
-</div>
-```
-**NOTE:** The `owl-theme` class is optional, but without it, you will need to style navigation features on your own.
+`text
+Dataset
+   ↓
+Data Pre-processing
+   ↓
+Feature Selection
+   ↓
+Model Training
+   ↓
+Machine Learning / LSTM
+   ↓
+Performance Evaluation
+   ↓
+Phishing / Legitimate
 
 
-Call the [plugin](https://learn.jquery.com/plugins/) function and your carousel is ready.
-
-```javascript
-$(document).ready(function(){
-  $('.owl-carousel').owlCarousel();
-});
-```
-
-## Documentation
-
-The documentation, included in this repo in the root directory, is built with [Assemble](http://assemble.io/) and publicly available at https://owlcarousel2.github.io/OwlCarousel2/. The documentation may also be run locally.
-
-## Building
-
-This package comes with [Grunt](http://gruntjs.com/) and [Bower](http://bower.io/). The following tasks are available:
-
-  * `default` compiles the CSS and JS into `/dist` and builds the doc.
-  * `dist` compiles the CSS and JS into `/dist` only.
-  * `watch` watches source files and builds them automatically whenever you save.
-  * `test` runs [JSHint](http://www.jshint.com/) and [QUnit](http://qunitjs.com/) tests headlessly in [PhantomJS](http://phantomjs.org/).
-
-To define which plugins are build into the distribution just edit `/_config.json` to fit your needs.
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## Roadmap
-
-Please make sure to check out our [Roadmap Discussion](https://github.com/OwlCarousel2/OwlCarousel2/issues/1756).
 
 
-## License
+## 🔮 Future Scope
 
-The code and the documentation are released under the [MIT License](LICENSE).
+- Evaluate the importance of different feature groups.
+- Analyze the effect of removing each feature group from the dataset.
+- Improve phishing detection accuracy using additional features.
+- Explore the model on larger and more diverse datasets.
+
+## 📌 Conclusion
+
+AI Shield demonstrates the effectiveness of machine learning and LSTM-based deep learning for phishing website detection. The proposed LSTM model achieved an accuracy of 96.55% on the evaluated dataset.
